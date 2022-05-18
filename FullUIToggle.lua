@@ -11,14 +11,14 @@ local originalUnitNamePlayerState = nil;
 
 function FullUIToggle.Toggle()
     if (uiIsHidden == false) then
-        Debug("Hiding UI.");
+        FullUIToggle.Debug("Hiding UI.");
         UIParent:Hide();
-        RememberUnitnamestates();
+        FullUIToggle.RememberUnitnamestates();
         uiIsHidden = true;
     else
-        Debug("Showing UI.");
+        FullUIToggle.Debug("Showing UI.");
         UIParent:Show();
-        RestoreUnitNameStates();
+        FullUIToggle.RestoreUnitNameStates();
         uiIsHidden = false;
     end
 end
@@ -30,18 +30,18 @@ function FullUIToggle.RememberUnitnamestates()
     SetCVar("UnitNameOwn", 0);
     SetCVar("UnitNameNPC", 0);
     SetCVar("UnitNamePlayer", 0);
-    Debug("Saved state of UnitNameOwn (" .. originalUnitNameOwnState .. ") and set it to 0.");
-    Debug("Saved state of UnitNameNPC (" .. originalUnitNameNPCState .. ") and set it to 0.");
-    Debug("Saved state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ") and set it to 0.");
+    FullUIToggle.Debug("Saved state of UnitNameOwn (" .. originalUnitNameOwnState .. ") and set it to 0.");
+    FullUIToggle.Debug("Saved state of UnitNameNPC (" .. originalUnitNameNPCState .. ") and set it to 0.");
+    FullUIToggle.Debug("Saved state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ") and set it to 0.");
 end
 
 function FullUIToggle.RestoreUnitNameStates()
     SetCVar("UnitNameOwn", originalUnitNameOwnState);
     SetCVar("UnitNameNPC", originalUnitNameOwnState);
     SetCVar("UnitNamePlayer", originalUnitNameOwnState);
-    Debug("Restored state of UnitNameOwn (" .. originalUnitNameOwnState .. ").");
-    Debug("Restored state of UnitNameNPC (" .. originalUnitNameNPCState .. ").");
-    Debug("Restored state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ").");
+    FullUIToggle.Debug("Restored state of UnitNameOwn (" .. originalUnitNameOwnState .. ").");
+    FullUIToggle.Debug("Restored state of UnitNameNPC (" .. originalUnitNameNPCState .. ").");
+    FullUIToggle.Debug("Restored state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ").");
 end
 
 function FullUIToggle.Debug(text)
