@@ -1,7 +1,7 @@
 FullUIToggle = {};
 
 -- Debug mode --
-local debugMode = false;
+local debugMode = true;
 
 -- Global runtime variables --
 local uiIsHidden = false;
@@ -37,8 +37,8 @@ end
 
 function FullUIToggle.RestoreUnitNameStates()
     SetCVar("UnitNameOwn", originalUnitNameOwnState);
-    SetCVar("UnitNameNPC", originalUnitNameOwnState);
-    SetCVar("UnitNamePlayer", originalUnitNameOwnState);
+    SetCVar("UnitNameNPC", originalUnitNameNPCState);
+    SetCVar("UnitNamePlayer", originalUnitNamePlayerState);
     FullUIToggle.Debug("Restored state of UnitNameOwn (" .. originalUnitNameOwnState .. ").");
     FullUIToggle.Debug("Restored state of UnitNameNPC (" .. originalUnitNameNPCState .. ").");
     FullUIToggle.Debug("Restored state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ").");
