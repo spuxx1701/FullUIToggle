@@ -1,0 +1,9 @@
+{
+    "Lua.diagnostics.globals": [
+        "SendChatMessage",
+        "UIParent",
+        "DEFAULT_CHAT_FRAME",
+        "GetCVar",
+        "SetCVar"
+    ]
+}

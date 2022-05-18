@@ -1,0 +1,5 @@
+<Bindings>
+    <Binding name="FUIT_TOGGLE">
+        Toggle()
+    </Binding>
+</Bindings>

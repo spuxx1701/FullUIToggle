@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: FullUIToggle
+## Author: Leopold Hock (https://github.com/leopoldhock)
+## Notes: Allows hiding the entire UI, including nameplates or unit names.
+## OptionalDeps:
+## SavedVariables:
+## SavedVariablesPerCharacter:
+
+FullUIToggle.xml
