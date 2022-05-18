@@ -1,5 +1,5 @@
 <Bindings>
     <Binding name="FullUIToggle - Toggle UI">
-        Toggle()
+        FullUIToggle:Toggle()
     </Binding>
 </Bindings>
