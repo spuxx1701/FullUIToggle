@@ -23,7 +23,7 @@ function FullUIToggle.Toggle()
     end
 end
 
-function RememberUnitnamestates()
+function FullUIToggle.RememberUnitnamestates()
     originalUnitNameOwnState = GetCVar("UnitNameOwn");
     originalUnitNameNPCState = GetCVar("UnitNameNPC");
     originalUnitNamePlayerState = GetCVar("UnitNamePlayer");
@@ -35,7 +35,7 @@ function RememberUnitnamestates()
     Debug("Saved state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ") and set it to 0.");
 end
 
-function RestoreUnitNameStates()
+function FullUIToggle.RestoreUnitNameStates()
     SetCVar("UnitNameOwn", originalUnitNameOwnState);
     SetCVar("UnitNameNPC", originalUnitNameOwnState);
     SetCVar("UnitNamePlayer", originalUnitNameOwnState);
@@ -44,7 +44,7 @@ function RestoreUnitNameStates()
     Debug("Restored state of UnitNamePlayer (" .. originalUnitNamePlayerState .. ").");
 end
 
-function Debug(text)
+function FullUIToggle.Debug(text)
     if (debugMode) then
         DEFAULT_CHAT_FRAME:AddMessage("[FUIT] " .. text, 1, 1, 1);
     end
