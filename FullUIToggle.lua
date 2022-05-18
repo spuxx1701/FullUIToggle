@@ -1,5 +1,5 @@
 -- Debug mode --
-DebugMode = true;
+DebugMode = false;
 
 -- Global runtime variables --
 UiIsHidden = false;
