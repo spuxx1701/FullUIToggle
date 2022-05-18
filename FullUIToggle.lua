@@ -1,7 +1,7 @@
 FullUIToggle = {};
 
 -- Debug mode --
-local debugMode = true;
+local debugMode = false;
 
 -- Global runtime variables --
 local uiIsHidden = false;
