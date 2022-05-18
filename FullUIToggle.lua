@@ -44,5 +44,7 @@ function RestoreUnitNameStates()
 end
 
 function Debug(text)
-    DEFAULT_CHAT_FRAME:AddMessage("[FUIT] " .. text, 1, 1, 1);
+    if (DebugMode) then
+        DEFAULT_CHAT_FRAME:AddMessage("[FUIT] " .. text, 1, 1, 1);
+    end
 end
